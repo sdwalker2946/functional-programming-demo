@@ -10,8 +10,9 @@ division x y
 
 -- Write factorial here
 factorial :: Int -> Int
-factorial 0 = 1
-factorial n = n * factorial (n-1)
+factorial n
+    | n <= 0 = 1
+    | otherwise = n * factorial (n-1)
 
 -- Write factList here
 factList :: Int -> [Int]
